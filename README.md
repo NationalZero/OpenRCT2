@@ -6,8 +6,9 @@ Files for demonstrating work on branches of this fork. Nothing here is part of a
 
 **[Download `spartan.peep_animations.entertainer_cyclopath.parkobj`](https://github.com/NationalZero/OpenRCT2/raw/demo-assets/spartan.peep_animations.entertainer_cyclopath.parkobj)**
 
-An entertainer costume that demonstrates vehicle-style turning. Its animation group sets `"vehicleTurning": true`,
-and its animations provide 32-rotation sprites through `"vehicleOffset"` alongside the usual 4-rotation `"offset"`.
+An entertainer costume that demonstrates smooth turning and 32-direction sprites. Its animation group sets
+`"smoothTurning": true`, and its animations provide 32-rotation sprites through `"offset32"` alongside the usual
+4-rotation `"offset"`. (The sprites happen to be a bicycle, which makes the turning easy to see.)
 
 ### Install
 
@@ -16,7 +17,7 @@ and its animations provide 32-rotation sprites through `"vehicleOffset"` alongsi
    - Windows: `Documents\OpenRCT2\object`
    - macOS: `~/Library/Application Support/OpenRCT2/object`
    - Linux: `~/.config/OpenRCT2/object`
-3. Start OpenRCT2 built from the branch with vehicle-style entertainer support.
+3. Start OpenRCT2 built from the branch with smooth turning support.
 4. Add the object to your park: open **Object Selection** (from the Cheats menu in the top toolbar, or in the
    Scenario Editor), go to the **Peep Animations** tab and tick **Cyclopath**.
 5. Hire an entertainer (or open an existing one) and pick **Cyclopath** as the costume.
