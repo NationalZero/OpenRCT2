@@ -49,6 +49,10 @@ namespace OpenRCT2
                 {
                     group[typeEnum].baseImage32 = _imageOffsetId + group[typeEnum].imageTableOffset32;
                 }
+                if (group[typeEnum].uphillImageTableOffset != 0)
+                {
+                    group[typeEnum].uphillBaseImage = _imageOffsetId + group[typeEnum].uphillImageTableOffset;
+                }
                 group[typeEnum].bounds = inferMaxAnimationDimensions(group[typeEnum]);
 
                 // Balloons, hats and umbrellas are painted separately, so the inference
@@ -129,6 +133,7 @@ namespace OpenRCT2
                             .imageTableOffset = referenceAnim.imageTableOffset,
                             .frameOffsets = sequence,
                             .imageTableOffset32 = referenceAnim.imageTableOffset32,
+                            .uphillImageTableOffset = referenceAnim.uphillImageTableOffset,
                         };
                         continue;
                     }
@@ -150,6 +155,7 @@ namespace OpenRCT2
                 .imageTableOffset = Json::GetNumber<uint16_t>(animJson["offset"]),
                 .frameOffsets = sequence,
                 .imageTableOffset32 = Json::GetNumber<uint16_t>(animJson["offset32"]),
+                .uphillImageTableOffset = Json::GetNumber<uint16_t>(animJson["uphillOffset"]),
             };
         }
 
