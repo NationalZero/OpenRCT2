@@ -8,7 +8,7 @@ Files for demonstrating work on branches of this fork. Nothing here is part of a
 
 An entertainer costume that demonstrates smooth turning and 32-direction sprites. Its animation group sets
 `"smoothTurning": true`, and its animations provide 32-rotation sprites through `"offset32"` alongside the usual
-4-rotation `"offset"`. (The sprites happen to be a bicycle, which makes the turning easy to see.)
+4-rotation `"offset"`. (The sprites were adapted from a ride vehicle as a quick demo.)
 
 ### Install
 
