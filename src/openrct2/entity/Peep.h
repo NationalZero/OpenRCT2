@@ -429,6 +429,7 @@ namespace OpenRCT2
         void stateReset();
         [[nodiscard]] uint8_t getNextDirection() const;
         bool getNextIsSloped() const;
+        bool isWalkingUphill() const;
         bool getNextIsSurface() const;
         void setNextFlags(uint8_t next_direction, bool is_sloped, bool is_surface);
         bool canBePickedUp() const;

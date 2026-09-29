@@ -55,6 +55,10 @@ namespace OpenRCT2
         // Zero when absent, in which case the 4-rotation images at imageTableOffset are used.
         ImageIndex imageTableOffset32{};
         uint32_t baseImage32{};
+
+        // Optional 4-rotation images for walking up sloped paths ("uphillOffset"), laid out like imageTableOffset.
+        ImageIndex uphillImageTableOffset{};
+        uint32_t uphillBaseImage{};
     };
 
     struct PeepAnimations

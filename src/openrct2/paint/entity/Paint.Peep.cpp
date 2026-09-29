@@ -36,6 +36,8 @@ BaseImageAndOffset PaintPeepGetBaseImageAndOffset(const Peep& peep, uint8_t imag
     // Offset frame onto the base image, using rotation except for the 'picked up' state
     if (actionAnimationGroup == PeepAnimationType::hanging)
         baseImageId += imageOffset;
+    else if (anim.uphillBaseImage != 0 && peep.isWalkingUphill())
+        baseImageId = anim.uphillBaseImage + (imageDirection >> 3) + imageOffset * 4;
     else if (anim.baseImage32 != 0)
         baseImageId = anim.baseImage32 + imageDirection + imageOffset * 32;
     else

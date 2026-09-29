@@ -135,6 +135,12 @@ namespace OpenRCT2
         return nextFlags & PEEP_NEXT_FLAG_IS_SLOPED;
     }
 
+    // On a sloped path, facing the way it rises. Mid-turn orientations don't count.
+    bool Peep::isWalkingUphill() const
+    {
+        return getNextIsSloped() && orientation == getNextDirection() * 8;
+    }
+
     bool Peep::getNextIsSurface() const
     {
         return nextFlags & PEEP_NEXT_FLAG_IS_SURFACE;
